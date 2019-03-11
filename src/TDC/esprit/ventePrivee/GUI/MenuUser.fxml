@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.MenuUserController">
+    <stylesheets>
+        <URL value="@AuthAdmin.css" />
+    </stylesheets>
+   <children>
+      <Text fill="#f2eaea" layoutX="40.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu Chère Client :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#f5f2f2" layoutX="193.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All For Deal : Espace Client" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="nom_user_connect" fill="#f5efef" layoutX="219.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="73.13671875">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="prnm_user_connect" fill="#f5efef" layoutX="292.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="84.13671875">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="btn_mon_compte" layoutX="74.0" layoutY="133.0" mnemonicParsing="false" onAction="#ConsulterCompte" prefHeight="25.0" prefWidth="318.0" text="Consulter Mon Compte Personnel" />
+      <Button fx:id="btn_offres" layoutX="77.0" layoutY="239.0" mnemonicParsing="false" onAction="#ConsulterOffres" prefHeight="25.0" prefWidth="318.0" text="Consulter Offres Produits du : All For Deal" />
+      <Button fx:id="btn_se_deconnect_espace" layoutX="250.0" layoutY="525.0" mnemonicParsing="false" onAction="#DeconnecterEspace" text="Se Déconnecter" />
+      <ImageView fx:id="btn_Consult_Panier" fitHeight="77.0" fitWidth="87.0" layoutX="498.0" layoutY="63.0" onMouseClicked="#ConsulterPanierAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/panier-moyen.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_user_EspaceClient" layoutX="14.0" layoutY="18.0" prefHeight="25.0" prefWidth="27.0" visible="false" />
+      <Button fx:id="btn_offres_services" layoutX="74.0" layoutY="338.0" mnemonicParsing="false" onAction="#versOffreServices" prefHeight="25.0" prefWidth="324.0" text="Consulter Offres Services du : All For Deal" />
+      <Button fx:id="btn_consult_dem_serv" layoutX="74.0" layoutY="441.0" mnemonicParsing="false" onAction="#ConsultDemServiceAction" prefHeight="25.0" prefWidth="324.0" text="Consulter Demandes Services : All For Deal" />
+   </children>
+</AnchorPane>

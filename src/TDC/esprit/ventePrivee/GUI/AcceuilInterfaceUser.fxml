@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="TDC.esprit.ventePrivee.GUI.AcceuilUserController">
+    <stylesheets>
+        <URL value="@AcceuilInterfaceUser.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="btnInscrit" layoutX="100.0" layoutY="93.0" mnemonicParsing="false" onAction="#Inscrire" prefHeight="25.0" prefWidth="87.0" text="S'inscrire" />
+      <Button fx:id="btnConx" layoutX="100.0" layoutY="207.0" mnemonicParsing="false" onAction="#SeConnecter" text="Se Connecter" />
+      <Button fx:id="btnQuitter" layoutX="241.0" layoutY="327.0" mnemonicParsing="false" onAction="#Exit" prefHeight="25.0" prefWidth="119.0" text="Quitter" />
+   </children>
+</AnchorPane>

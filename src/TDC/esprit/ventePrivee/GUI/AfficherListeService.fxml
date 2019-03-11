@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.AfficherListeServiceController">
+    <stylesheets>
+        <URL value="@AddProduct.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="table_service" layoutY="60.0" prefHeight="271.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="col_idService" prefWidth="75.0" text="Id" visible="false" />
+          <TableColumn fx:id="col_Description" prefWidth="205.0" text="Description" />
+            <TableColumn fx:id="col_DateService" prefWidth="116.0" text="Date" />
+            <TableColumn fx:id="col_Categorie_Service" prefWidth="277.0" text="Catégorie" />
+        </columns>
+      </TableView>
+      <Text fill="#ededf2" layoutX="79.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu dans All For Deal : vous pouvez consultez la liste des Services ici" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Text>
+      <TextField fx:id="col_Recherche" layoutX="391.0" layoutY="349.0" prefHeight="25.0" prefWidth="153.0" promptText="Tapez içi pour Rechercher" />
+      <Button fx:id="btnConsulter" layoutX="237.0" layoutY="349.0" mnemonicParsing="false" onAction="#ConsulterService" prefHeight="25.0" prefWidth="127.0" text="Consulter Service">
+         <effect>
+            <SepiaTone />
+         </effect></Button>
+      <TextField fx:id="id_user_invisble" layoutX="544.0" layoutY="361.0" prefHeight="25.0" prefWidth="30.0" visible="false" />
+      <Button fx:id="btnRetour" layoutX="53.0" layoutY="349.0" mnemonicParsing="false" onAction="#seDeconnecter" prefHeight="25.0" prefWidth="127.0" text="Retour">
+         <effect>
+            <SepiaTone />
+         </effect></Button>
+      <TextField fx:id="id_serv_invisible" layoutX="23.0" layoutY="361.0" prefHeight="25.0" prefWidth="30.0" visible="false" />
+   </children>
+</AnchorPane>

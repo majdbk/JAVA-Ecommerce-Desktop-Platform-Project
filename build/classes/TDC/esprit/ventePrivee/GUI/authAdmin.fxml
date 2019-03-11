@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="271.0" prefWidth="495.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.authAdminController">
+    <stylesheets>
+        <URL value="@AuthAdmin.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="83.0" layoutY="109.0" text="Login:" textFill="#fcf8f8" />
+      <Label layoutX="83.0" layoutY="169.0" text="Password:" textFill="#f8f7f7" />
+      <TextField fx:id="fieldLogin" layoutX="157.0" layoutY="105.0" prefHeight="25.0" prefWidth="197.0" promptText="                  Login Here" />
+      <PasswordField fx:id="field_pwd" layoutX="157.0" layoutY="165.0" prefHeight="25.0" prefWidth="197.0" promptText="                 Password Here" />
+      <Button fx:id="btnConnect" layoutX="14.0" layoutY="212.0" mnemonicParsing="false" onAction="#seConnecterAction" prefHeight="25.0" prefWidth="159.0" text="Se Connecter" />
+      <Text fill="#f8f8f8" fontSmoothingType="LCD" layoutX="129.0" layoutY="34.0" opacity="0.74" strokeType="OUTSIDE" strokeWidth="0.0" text="All For Deal : Espace Authentification" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Digital-7" size="16.0" />
+         </font> 
+      </Text>
+      <Label fx:id="labelVerif" layoutX="176.0" layoutY="68.0" prefHeight="17.0" prefWidth="159.0" textFill="#e10707" />
+      <Button fx:id="btn_Inscrit" layoutX="248.0" layoutY="212.0" mnemonicParsing="false" onAction="#versInterfaceInscrit" prefHeight="25.0" prefWidth="224.0" text="Créer Nouveau Compte Utilisateur" />
+      <ImageView fx:id="logoExitAuthen" fitHeight="43.0" fitWidth="47.0" layoutX="458.0" layoutY="1.0" onMouseClicked="#ExitAuthAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Exit.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

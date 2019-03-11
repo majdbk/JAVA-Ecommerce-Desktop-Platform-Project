@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.SupprimerController">
+ <stylesheets>
+      <URL value="@AddProduct.css" />
+ </stylesheets>
+
+    <children>
+      <Button fx:id="btnSupp" layoutX="404.0" layoutY="289.0" mnemonicParsing="false" onAction="#Supprimer" text="Supprimer" />
+      <TableView fx:id="table" editable="true" layoutX="92.0" layoutY="123.0" prefHeight="126.0" prefWidth="648.0">
+         
+         <columns>
+            <TableColumn fx:id="id_col" prefWidth="95.0" text="Id" />
+            <TableColumn fx:id="desc_col" prefWidth="126.0" text="Description" />
+            <TableColumn fx:id="duree_col" prefWidth="147.0" text="Duree" />
+            <TableColumn fx:id="lieu_col" prefWidth="57.0" text="Lieux" />
+            <TableColumn fx:id="date_col" prefWidth="145.0" text="Date " />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="Note " />
+            <TableColumn fx:id="note_col" prefWidth="75.0" text="Note" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnRetour" layoutX="731.0" layoutY="526.0" mnemonicParsing="false" onAction="#Retour" text="Retour" />
+      <TextField fx:id="textsupp" layoutX="489.0" layoutY="289.0" />
+      <ComboBox fx:id="note_val" layoutX="141.0" layoutY="482.0" prefHeight="25.0" prefWidth="163.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="1 etoile" />
+               <String fx:value="2 etoiles" />
+               <String fx:value="3 etoiles" />
+               <String fx:value="4 etoiles" />
+               <String fx:value="5 etoiles" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="lieu" layoutX="141.0" layoutY="402.0" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="durree" layoutX="141.0" layoutY="358.0" prefHeight="25.0" prefWidth="163.0" />
+      <TextArea fx:id="desc" layoutX="141.0" layoutY="314.0" prefHeight="25.0" prefWidth="163.0" />
+      <Text fill="#f5f2f2" layoutX="29.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note d'valuation" wrappingWidth="95.13671875" />
+      <Text fill="#f5f2f2" layoutX="28.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'haujoudhui" wrappingWidth="114.13671875" />
+      <Text fill="#f5f2f2" layoutX="27.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lieu" wrappingWidth="69.0" />
+      <Text fill="#f5f2f2" layoutX="26.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duree" wrappingWidth="69.0" />
+      <Text fill="#f5f2f2" layoutX="28.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="81.13671875" />
+      <TextField fx:id="date" layoutX="141.0" layoutY="443.0" prefHeight="25.0" prefWidth="163.0" />
+      <Button fx:id="btnmodif" layoutX="26.0" layoutY="526.0" mnemonicParsing="false" onAction="#modifier" text="Valider les modification" />
+      <Text fill="#f5f2f2" layoutX="24.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id" />
+      <ComboBox fx:id="id_modif" layoutX="141.0" layoutY="276.0" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="labelSearchField" layoutX="238.0" layoutY="74.0" onAction="#FiltredSearch" prefHeight="25.0" prefWidth="502.0" />
+      <Button fx:id="map" layoutX="404.0" layoutY="327.0" mnemonicParsing="false" onAction="#afficher_map" prefHeight="25.0" prefWidth="236.0" text="Consulter Google Map" />
+      <Text fill="#f5f2f2" layoutX="101.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rechercher" wrappingWidth="81.13671875" />
+      <Text fill="#f3f3f8" layoutX="31.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Service" wrappingWidth="272.13671875">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

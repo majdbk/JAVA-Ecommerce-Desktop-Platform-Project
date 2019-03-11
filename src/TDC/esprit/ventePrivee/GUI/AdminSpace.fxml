@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="1159.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.EspaceAdminController">
+    <stylesheets>
+        <URL value="@AuthAdmin.css" />
+    </stylesheets>
+     <children>
+      <TabPane layoutY="36.0" prefHeight="463.0" prefWidth="1159.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabGestUsers" text="Gestion de Réclamations Services">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="table_Rec_ServRec" layoutX="47.0" layoutY="22.0" onMouseClicked="#getMail" prefHeight="249.0" prefWidth="1028.0" AnchorPane.bottomAnchor="163.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="22.0">
+                          <columns>
+                            <TableColumn prefWidth="218.0" text="Réclamant">
+                                 <columns>
+                                  <TableColumn fx:id="id_Rec_user" prefWidth="75.0" text="Id" />
+                                    <TableColumn fx:id="nom_Rec" prefWidth="75.0" text="Nom" />
+                                    <TableColumn fx:id="prnm_Rec" prefWidth="75.0" text="Prénom" />
+                                    <TableColumn fx:id="email_Rec" prefWidth="75.0" text="Email" />
+                                 </columns>
+                              </TableColumn>
+                              <TableColumn minWidth="0.0" prefWidth="242.0" text="Service Recalmé">
+                                 <columns>
+                                    <TableColumn fx:id="id_Serv_Rec" prefWidth="66.0" text="Numéro " />
+                                    <TableColumn fx:id="categ_Serv_Rec" prefWidth="94.0" text="Catégorie" />
+                                 </columns>
+                              </TableColumn>
+                              <TableColumn minWidth="0.0" prefWidth="567.0" text="Réclamation">
+                                 <columns>
+                                    <TableColumn fx:id="id_rec_object" prefWidth="38.0" text="Id" />
+                                    <TableColumn fx:id="desc_rec" prefWidth="161.0" text="Description " />
+                                    <TableColumn fx:id="date_rec" prefWidth="102.0" text="Date" />
+                                    <TableColumn fx:id="rasion_rec" prefWidth="95.0" text="Raison" />
+                                    <TableColumn fx:id="nb_Pts_Rec" prefWidth="171.0" text="Nombre de Réclamations" />
+                                 </columns>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                        <ProgressBar fx:id="progress_bar" layoutX="580.0" layoutY="345.0" prefWidth="200.0" progress="0.0" />
+                        <Button fx:id="envoieAvertissement" layoutX="275.0" layoutY="342.0" mnemonicParsing="false" onAction="#AdvertissementAction" prefHeight="25.0" prefWidth="187.0" text="Envoyer Avertissement" />
+                        <TextField fx:id="field_get_email_reclamant" layoutX="650.0" layoutY="281.0" prefHeight="25.0" prefWidth="178.0" visible="false" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabGestProd" text="Gestion des Offres Produits">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TableAffiche" prefHeight="273.0" prefWidth="762.0">
+                           <columns>
+                              <TableColumn fx:id="Id_Col" prefWidth="75.0" text="Id" visible="false" />
+                              <TableColumn fx:id="prix_Col" prefWidth="75.0" text="Prix" />
+                              <TableColumn fx:id="Lib_Col" prefWidth="75.0" text="Libéllè" />
+                              <TableColumn fx:id="Date_Col" prefWidth="114.0" text="Date Ajout " />
+                              <TableColumn fx:id="Categ_Col" prefWidth="127.0" text="Catégorie" />
+                              <TableColumn fx:id="Desc_Col" prefWidth="268.0" text="Description" />
+                              <TableColumn fx:id="valid_col" prefWidth="101.0" text="Validité" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btn_valid_prod" layoutX="344.0" layoutY="294.0" mnemonicParsing="false" onAction="#ValiderProduitAction" text="Valider Offre Produit" />
+                        <TextField fx:id="field_search_offre_prod" layoutX="535.0" layoutY="294.0" promptText="Search here" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>  
+            <Tab fx:id="donne_admin" text="Mes Données">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="486.0" prefWidth="943.0">
+                     <children>
+                        <TextField fx:id="id_admin" disable="true" layoutX="190.0" layoutY="14.0" visible="false" />
+                        <Label layoutX="38.0" layoutY="273.0" text="Mon Login :" textFill="#f8f7f7" />
+                        <Label layoutX="40.0" layoutY="314.0" text="Mon Mot de Passe :" textFill="#fcfafa" />
+                        <TextField fx:id="login_root" editable="false" layoutX="190.0" layoutY="269.0" />
+                        <TextField fx:id="pwd_root" editable="false" layoutX="190.0" layoutY="310.0" />
+                        <Button fx:id="btnModifRoot" layoutX="330.0" layoutY="360.0" mnemonicParsing="false" onAction="#ModifRoot" prefHeight="25.0" prefWidth="239.0" text="Valider Changements" />
+                        <Button fx:id="btnEditable" layoutX="52.0" layoutY="360.0" mnemonicParsing="false" onAction="#setEditableAction" prefHeight="25.0" prefWidth="250.0" text="Faire Changements" />
+                        <TextField fx:id="nom_root" editable="false" layoutX="190.0" layoutY="47.0" />
+                        <TextField fx:id="prnm_root" editable="false" layoutX="190.0" layoutY="96.0" />
+                        <TextField fx:id="age_root" editable="false" layoutX="190.0" layoutY="139.0" />
+                        <TextField fx:id="email_root" editable="false" layoutX="190.0" layoutY="227.0" />
+                        <Text fill="#fffdfd" layoutX="36.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" />
+                        <Text fill="#f2eded" layoutX="36.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom :" />
+                        <Text fill="#f5f5f5" layoutX="39.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age :" />
+                        <Text fill="#fcf8f8" layoutX="40.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail :" />
+                        <Text fill="#fcfafa" layoutX="40.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe :" />
+                        <ImageView fitHeight="330.0" fitWidth="113.0" layoutX="824.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/me.jpg" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="sexxx_roooot" layoutX="375.0" layoutY="186.0" prefWidth="150.0" promptText="Choisir Votre Sexe">
+                            <items>
+                         <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Homme" />
+                        <String fx:value="Femme" />
+                         </FXCollections>
+                        </items>   
+                        </ComboBox>
+                        <TextField fx:id="field_sex_root" editable="false" layoutX="190.0" layoutY="186.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabGestServ" text="Gestion des Offres Services ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="409.0" prefWidth="811.0">
+                     <children>
+                        <TableView fx:id="TableAfficheServ_User" prefHeight="273.0" prefWidth="758.0">
+                           <columns>
+                              <TableColumn fx:id="id_col_dem_serv" prefWidth="46.0" text="Id Service" visible="false" />
+                              <TableColumn fx:id="desc_serv_col" prefWidth="200.0" text="Description Service Proposé" />
+                              <TableColumn fx:id="Date_serv_col" prefWidth="75.0" text="Date Ajout " />
+                              <TableColumn fx:id="Categ_serv_col" prefWidth="75.0" text="Catégorie" />
+                              <TableColumn fx:id="valid_serv_col" prefWidth="52.0" text="Validité" />
+                              <TableColumn fx:id="prop_serv" prefWidth="355.0" text="Propriétaire du Service ">
+                                 <columns>
+                                    <TableColumn fx:id="id_col_prop_serv" prefWidth="47.0" text="Id" visible="false" />
+                                    <TableColumn fx:id="nom_user_col" prefWidth="75.0" text="Nom" />
+                                    <TableColumn fx:id="prenom_user_col" prefWidth="75.0" text="Prenom" />
+                                    <TableColumn fx:id="email_user_col" prefWidth="117.0" text="E-mail" />
+                                    <TableColumn fx:id="tel_user_col" prefWidth="88.0" text="Téléphone" />
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="fieldSearch_Service" layoutX="301.0" layoutY="287.0" promptText="Search" />
+                        <Button fx:id="btn_valid_serv" layoutX="42.0" layoutY="332.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="315.0" text="Valider Service" />
+                        <Button fx:id="btn_profile" layoutX="450.0" layoutY="332.0" mnemonicParsing="false" onAction="#versProfileUser" prefHeight="25.0" prefWidth="320.0" text="Voir Profile Propriétaire" />
+                        <TextField fx:id="id_propr_Non_Visible" layoutX="516.0" layoutY="377.0" visible="false" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Statistiques de l'application">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackedAreaChart layoutX="1.0" prefHeight="412.0" prefWidth="943.0">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </StackedAreaChart>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Gestion des Cadeaux">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="452.0" prefWidth="620.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="ajouter_cadeaux" text="Ajouter Cadeaux">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="P_Bonus" layoutX="84.0" layoutY="226.0" prefHeight="25.0" prefWidth="328.0" />
+                                          <Button fx:id="ajouter" layoutX="463.0" layoutY="232.0" mnemonicParsing="false" onAction="#Ajouter_Cadeaux" prefHeight="31.0" prefWidth="122.0" text="Ajouter Cadeau">
+                                             <font>
+                                                <Font name="Arial" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea fx:id="desc" layoutX="84.0" layoutY="257.0" prefHeight="119.0" prefWidth="329.0" />
+                                          <Label layoutX="15.0" layoutY="385.0" text="Images" textFill="#ebe5e5" />
+                                          <Label layoutX="15.0" layoutY="276.0" text="Description " textFill="#ebe5e5" />
+                                          <Label layoutX="13.0" layoutY="230.0" text="Points Bonus" textFill="#ebe5e5" />
+                                          <ImageView fx:id="imageAjoutCadeaux" fitHeight="133.0" fitWidth="164.0" layoutX="441.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button fx:id="btn_brows" layoutX="84.0" layoutY="381.0" mnemonicParsing="false" onAction="#rechercher_img" text="Browse" />
+                                          <TextField fx:id="img" layoutX="142.0" layoutY="381.0" prefHeight="25.0" prefWidth="271.0" />
+                                          <TableView fx:id="tab2" layoutX="4.0" layoutY="11.0" prefHeight="202.0" prefWidth="612.0">
+                                             <columns>
+                                                <TableColumn fx:id="id2" minWidth="0.0" prefWidth="26.0" text="ID" />
+                                                <TableColumn fx:id="p2" prefWidth="128.0" text="Points bonus " />
+                                                <TableColumn fx:id="d2" prefWidth="472.0" text="Description" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="modifier_Cadeaux" text="Modifier Cadeaux">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tab" layoutX="5.0" layoutY="8.0" prefHeight="215.0" prefWidth="611.0">
+                                             <columns>
+                                                <TableColumn fx:id="id1" minWidth="0.0" prefWidth="57.0" text="ID" />
+                                                <TableColumn fx:id="p1" prefWidth="114.0" text="Points bonus " />
+                                                <TableColumn fx:id="d1" prefWidth="455.0" text="Description" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="48.0" layoutY="245.0" text="Points bonus" textFill="#f2ecec" />
+                                          <Label layoutX="48.0" layoutY="280.0" text="Description" textFill="#f2ecec" />
+                                          <TextField fx:id="P_Bonus2" layoutX="159.0" layoutY="241.0" />
+                                          <TextArea fx:id="desc2" layoutX="159.0" layoutY="281.0" prefHeight="67.0" prefWidth="151.0" />
+                                          <Button fx:id="modif" layoutX="67.0" layoutY="375.0" mnemonicParsing="false" onAction="#Modifier_Cadeaux" prefHeight="25.0" prefWidth="106.0" text="Modifier" />
+                                          <Button fx:id="supp" layoutX="186.0" layoutY="375.0" mnemonicParsing="false" onAction="#Supprimer_Cadeaux" prefHeight="25.0" prefWidth="106.0" text="Supprimer " />
+                                          <TextField fx:id="iddd" layoutX="455.0" layoutY="139.0" visible="false" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab> 
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnLogout" layoutX="967.0" layoutY="14.0" mnemonicParsing="false" onAction="#LogoutAction" prefHeight="25.0" prefWidth="166.0" text="Se Déconnecter" />
+      <Text fill="#fcfafa" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue : Mr Admin :" />
+      <Text fx:id="txt_nom_admin" fill="#54eb09" layoutX="140.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="76.13671875">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="txt_prnm_admin" fill="#54eb09" layoutX="196.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="76.13671875">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#f5f2f2" layoutX="797.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat :" />
+      <Text fill="#00ff48" layoutX="834.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connecté" />
+      <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="892.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/connected_checked.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

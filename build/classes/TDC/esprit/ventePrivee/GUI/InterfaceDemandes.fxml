@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="table" prefHeight="504.0" prefWidth="657.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.DemandesPublicController">
+    <stylesheets>
+        <URL value="@AddProduct.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableAffiche2" layoutX="2.0" layoutY="108.0" prefHeight="189.0" prefWidth="747.0">
+         <columns>
+            <TableColumn fx:id="col_id_demServ" prefWidth="45.0" text="Id" />
+            <TableColumn fx:id="col_obj" prefWidth="144.0" text="Objet" />
+            <TableColumn fx:id="col_description" prefWidth="109.0" text="Description" />
+            <TableColumn fx:id="col_categorie" minWidth="0.0" prefWidth="160.0" text="Categorie" />
+            <TableColumn fx:id="col_lieu" minWidth="0.0" prefWidth="126.0" text="Lieu" />
+            <TableColumn fx:id="col_date" minWidth="0.0" prefWidth="91.0" text="Date" />
+            <TableColumn fx:id="col_id_user" prefWidth="75.0" text="idUser" />
+         </columns>
+      </TableView>
+      <Button fx:id="consulter_id" layoutX="41.0" layoutY="314.0" mnemonicParsing="false" onAction="#versConsult" prefHeight="25.0" prefWidth="141.0" text="Consulter" />
+      <Label layoutX="28.0" layoutY="38.0" prefHeight="17.0" prefWidth="462.0" text="Les demandes proposées" textFill="#c3864d">
+         <font>
+            <Font name="Aparajita" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id_dem_serv_inv" layoutX="598.0" layoutY="339.0" visible="false" />
+      <TextField fx:id="Categorie" layoutX="245.0" layoutY="314.0" promptText="Search" />
+      <TextField fx:id="id_use_inv" layoutX="507.0" layoutY="398.0" prefHeight="25.0" prefWidth="24.0" visible="false" />
+      <Button fx:id="btn_retour_menu_user" layoutX="451.0" layoutY="314.0" mnemonicParsing="false" onAction="#RetourMenuUser" prefHeight="25.0" prefWidth="177.0" text="Retour" />
+   </children> 
+</AnchorPane>

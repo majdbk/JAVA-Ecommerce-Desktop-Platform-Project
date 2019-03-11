@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="444.0" prefWidth="671.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.interfacePanierController">
+    <stylesheets>
+        <URL value="@AuthAdmin.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="table_panier" layoutY="91.0" prefHeight="200.0" prefWidth="674.0">
+        <columns>
+            <TableColumn fx:id="idProduit" minWidth="0.0" prefWidth="60.0" text="id" visible="false" />
+          <TableColumn fx:id="libelle_prd_pnr" prefWidth="255.0" text="libelle" />
+          <TableColumn fx:id="prix_prd_pnr" prefWidth="237.0" text="prix" />
+        </columns>
+      </TableView>
+      <Button fx:id="retourner_id" layoutX="21.0" layoutY="373.0" mnemonicParsing="false" onAction="#RetournerPrecedant" prefHeight="25.0" prefWidth="113.0" text="retour" />
+      <Button fx:id="vider_id" layoutX="178.0" layoutY="374.0" mnemonicParsing="false" onAction="#ViderPanier" prefHeight="25.0" prefWidth="194.0" text="vider panier" />
+      <Button fx:id="supprimer_id" layoutX="428.0" layoutY="373.0" mnemonicParsing="false" onAction="#SupprimerProduit" prefHeight="25.0" prefWidth="194.0" text="supprimer" />
+      <TextField fx:id="id_produit_invisible" layoutX="536.0" layoutY="361.0" prefHeight="25.0" prefWidth="38.0" visible="false" />
+      <Label layoutX="229.0" layoutY="35.0" prefHeight="25.0" prefWidth="250.0" text="Bienvenue dans votre panier!" textFill="#ebeaee" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <TextField fx:id="id_user_invisible" layoutX="536.0" layoutY="398.0" prefHeight="25.0" prefWidth="38.0" visible="false" />
+   </children>
+</AnchorPane> 

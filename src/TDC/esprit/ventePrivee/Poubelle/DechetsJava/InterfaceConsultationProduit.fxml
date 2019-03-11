@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="704.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.InterfaceConsultationProduitController">
+    <stylesheets>
+        <URL value="@style_consultation_produit.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="43.0" layoutY="40.0" text="libelle" />
+      <Label layoutX="30.0" layoutY="68.0" text="description" />
+      <Label layoutX="33.0" layoutY="211.0" text="prix" />
+      <Label layoutX="26.0" layoutY="298.0" text="date ajout" />
+      <Label layoutX="28.0" layoutY="254.0" text="categorie" />
+      <Label layoutX="27.0" layoutY="325.0" text="image" />
+      <Button fx:id="commenter_id" layoutX="336.0" layoutY="91.0" mnemonicParsing="false" onAction="#commenter" text="commenter" />
+      <Button fx:id="ajouter_id" layoutX="336.0" layoutY="36.0" mnemonicParsing="false" onAction="#AjouterPanier" text="ajouter panier" />
+      <TextField fx:id="libelle_id" editable="false" layoutX="110.0" layoutY="36.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextArea fx:id="description_id" editable="false" layoutX="110.0" layoutY="77.0" prefHeight="124.0" prefWidth="149.0" />
+      <TextField fx:id="pri_id" editable="false" layoutX="110.0" layoutY="207.0" />
+      <TextField fx:id="categorie_id" editable="false" layoutX="110.0" layoutY="242.0" />
+      <TextField fx:id="date_ajout_id" editable="false" layoutX="110.0" layoutY="286.0" />
+      <TextField fx:id="image_id" editable="false" layoutX="110.0" layoutY="321.0" />
+      <TextField fx:id="idRecup" layoutX="527.0" layoutY="11.0" prefHeight="25.0" prefWidth="33.0" visible="false" />
+      <TextField fx:id="ajout_com_id" layoutX="336.0" layoutY="334.0" prefHeight="37.0" prefWidth="200.0" promptText="tapez commentaire ici" />
+      <Button fx:id="retour_id" layoutX="27.0" layoutY="361.0" mnemonicParsing="false" onAction="#retourner_precedant" text="retour" />
+      <TableView fx:id="table_com_id" layoutX="336.0" layoutY="132.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="commentaire_id" prefWidth="199.0" text="les commentaires" />
+        </columns>
+      </TableView>
+      <Label layoutX="80.0" layoutY="6.0" prefHeight="26.0" prefWidth="261.0" text="information sur le produit" textFill="#2b65c9">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="400.0" text="information sur le propritaire du produit" textFill="#161fa8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom_id" layoutX="118.0" layoutY="445.0" />
+      <TextField fx:id="prenom_id" layoutX="118.0" layoutY="486.0" />
+      <TextField fx:id="email_id" layoutX="419.0" layoutY="436.0" />
+      <TextField fx:id="telephone_id" layoutX="413.0" layoutY="486.0" />
+      <Label layoutX="21.0" layoutY="449.0" text="nom" />
+      <Label layoutX="22.0" layoutY="487.0" text="prenom" />
+      <Label layoutX="341.0" layoutY="440.0" text="email" />
+      <Label layoutX="341.0" layoutY="487.0" text="telephone" />
+      <TextField fx:id="idRecupUser" layoutX="583.0" layoutY="11.0" prefHeight="25.0" prefWidth="29.0" visible="false" />
+   </children>
+</AnchorPane>

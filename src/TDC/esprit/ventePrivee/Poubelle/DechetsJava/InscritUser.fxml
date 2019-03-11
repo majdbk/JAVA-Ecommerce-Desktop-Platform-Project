@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.InscriUserController">
+    <stylesheets>
+        <URL value="@InscritUser_Auth.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="34.0" layoutY="28.0" text="Nom: " />
+      <Label layoutX="34.0" layoutY="63.0" text="Prenom:" />
+      <Label layoutX="34.0" layoutY="101.0" text="Adresse:" />
+      <Label layoutX="34.0" layoutY="147.0" text="Email:" />
+      <Label layoutX="36.0" layoutY="192.0" text="Telephone:" />
+      <Label layoutX="36.0" layoutY="237.0" text="Statut:" />
+      <Label layoutX="36.0" layoutY="274.0" text="Login:" />
+      <Label layoutX="36.0" layoutY="324.0" text="Mot de Passe :" />
+      <TextField fx:id="field_nom" layoutX="151.0" layoutY="24.0" prefHeight="25.0" prefWidth="207.0" promptText="Saisir Votre Nom SVP" />
+      <TextField fx:id="field_prenom" layoutX="151.0" layoutY="59.0" prefHeight="25.0" prefWidth="207.0" promptText="Saisir Votre Prenom SVP" />
+      <TextField fx:id="field_Adresse" layoutX="151.0" layoutY="106.0" prefHeight="25.0" prefWidth="207.0" promptText="Saisir Votre Adresse SVP" />
+      <TextField fx:id="field_email" layoutX="151.0" layoutY="143.0" prefHeight="25.0" prefWidth="207.0" promptText="Saisir Votre Email SVP" />
+      <TextField fx:id="field_tel" layoutX="151.0" layoutY="188.0" prefHeight="25.0" prefWidth="207.0" promptText="00XXX-XX-XXX-XXX " />
+      <TextField fx:id="field_login" layoutX="151.0" layoutY="270.0" prefHeight="25.0" prefWidth="207.0" promptText="Saisir Votre Login SVP" />
+      <PasswordField layoutX="151.0" layoutY="320.0" prefHeight="25.0" prefWidth="207.0" promptText="Saisir Votre Mot de Passe SVP" />
+      <Label layoutX="36.0" layoutY="375.0" text="Sexe:" />
+      <RadioButton fx:id="sexe_Homme" layoutX="151.0" layoutY="375.0" mnemonicParsing="false" text="Homme">
+         <toggleGroup>
+            <ToggleGroup fx:id="sexe" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="sexe_Femme" layoutX="271.0" layoutY="375.0" mnemonicParsing="false" text="Femme" toggleGroup="$sexe" />
+      <Button fx:id="btnInscription" layoutX="330.0" layoutY="549.0" mnemonicParsing="false" onAction="#Sinscrire" prefHeight="25.0" prefWidth="207.0" text="S'inscrire" />
+      <Label layoutX="33.0" layoutY="459.0" text="Photo Profile:" />
+      <ImageView fx:id="ImgView_profile" fitHeight="100.0" fitWidth="129.0" layoutX="457.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btn_browse" layoutX="151.0" layoutY="455.0" mnemonicParsing="false" onAction="#browseImage" text="Browse" />
+      <TextField fx:id="field_path_img" layoutX="226.0" layoutY="455.0" prefHeight="25.0" prefWidth="207.0" />
+      <Button fx:id="btnRetourMenu" layoutX="34.0" layoutY="549.0" mnemonicParsing="false" onAction="#RetournerAcceuilUser" prefHeight="25.0" prefWidth="184.0" text="Retour" />
+      <ComboBox fx:id="field_statut" layoutX="151.0" layoutY="233.0" prefHeight="25.0" prefWidth="207.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Entreprise" />
+               <String fx:value="Particulier" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+   </children>
+</AnchorPane>

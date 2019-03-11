@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="610.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.ModifProduitOffertController">
+    <stylesheets>
+        <URL value="@AddProduct.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="90.0" fitWidth="82.0" layoutX="528.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@userInterface.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="59.0" layoutY="67.0" text="Id :" />
+      <Label layoutX="54.0" layoutY="109.0" text="Prix :" />
+      <Label layoutX="47.0" layoutY="151.0" text="Libellé :" />
+      <Label layoutX="43.0" layoutY="193.0" text="Description :" />
+      <Label layoutX="42.0" layoutY="284.0" text="Nombre de Points :" />
+      <Label layoutX="44.0" layoutY="352.0" text="Date Ajout :" />
+      <Label layoutX="47.0" layoutY="412.0" text="Catégorie :" />
+      <TextField fx:id="Text_Id" layoutX="156.0" layoutY="63.0" />
+      <TextField fx:id="Text_Prix" layoutX="156.0" layoutY="105.0" />
+      <TextField fx:id="Text_Libelle" layoutX="156.0" layoutY="147.0" />
+      <TextField fx:id="Text_Pts" layoutX="156.0" layoutY="280.0" />
+      <TextField fx:id="Text_Date" layoutX="156.0" layoutY="348.0" promptText="DD/MM/YYYY" />
+      <Button fx:id="btnValidModif" layoutX="369.0" layoutY="498.0" mnemonicParsing="false" onAction="#ValiderModif" prefHeight="25.0" prefWidth="175.0" text="Valider Modification" />
+      <Button fx:id="btnRetour" layoutX="87.0" layoutY="498.0" mnemonicParsing="false" onAction="#versIntAff" prefHeight="25.0" prefWidth="184.0" text="Retour" />
+      <TextArea fx:id="Text_Desc" layoutX="155.0" layoutY="193.0" prefHeight="63.0" prefWidth="221.0" />
+      <ComboBox fx:id="Text_Categorie" layoutX="156.0" layoutY="408.0" prefWidth="150.0">
+             <items>
+           <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Telephonie" />
+              <String fx:value="Ordinateur" />
+              <String fx:value="Laptop" />
+              <String fx:value="Consoles_Videos" />
+              <String fx:value="Jeux_Videos" />
+              <String fx:value="Camescopes" />
+              <String fx:value="Vetements" />
+              <String fx:value="Bricolage" />
+              <String fx:value="Electromenager" />
+              <String fx:value="autres" />  
+          </FXCollections>   
+          </items>            
+      </ComboBox>  
+      <Text fill="#f83a28" fontSmoothingType="LCD" layoutX="206.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modification Offre Produit ">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="ComboBox_Id" layoutX="320.0" layoutY="63.0" prefWidth="150.0" promptText="Null" />
+   </children>  
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="537.0" prefWidth="631.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="TDC.esprit.ventePrivee.GUI.OffresPublicUserController">
+    <stylesheets>
+        <URL value="@AuthAdmin.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutY="47.0" prefHeight="490.0" prefWidth="631.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Produits Disponibles sur All For Deal">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="table_produit" layoutX="42.0" prefHeight="200.0" prefWidth="548.0">
+                           <columns>
+                              <TableColumn fx:id="id_col" prefWidth="67.0" text="id" visible="false" />
+                              <TableColumn fx:id="prix_col" minWidth="0.0" prefWidth="0.0" text="prix" />
+                              <TableColumn fx:id="libelle_col" minWidth="2.0" prefWidth="173.0" text="libelle" />
+                              <TableColumn fx:id="description_col" minWidth="0.0" prefWidth="0.0" text="description" />
+                              <TableColumn fx:id="categorie_col" minWidth="0.0" prefWidth="257.0" text="categorie" />
+                              <TableColumn fx:id="validite_col" minWidth="0.0" prefWidth="115.0" text="validite_prod" visible="false" />
+                              <TableColumn fx:id="date_col" minWidth="0.0" prefWidth="116.0" text="date_ajout" />
+                              <TableColumn fx:id="id_user_col" prefWidth="125.0" text="id_user" visible="false" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="statistique_id" layoutX="208.0" layoutY="287.0" mnemonicParsing="false" onAction="#afficherStatistique" text="Voir Statistiques Des Produits" />
+                        <TextField fx:id="categorie_id" layoutX="205.0" layoutY="218.0" prefHeight="25.0" prefWidth="177.0" promptText="Tapez categorie à chercher içi" />
+                        <Button fx:id="consulter_id" layoutX="206.0" layoutY="373.0" mnemonicParsing="false" onAction="#consulterProduit" prefHeight="25.0" prefWidth="175.0" text="Consulter Produit" />
+                        <TextField fx:id="id_user_invisiblee" prefHeight="25.0" prefWidth="35.0" visible="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Services Disponibles sur All For Deal">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnRetourEspace" layoutX="205.0" layoutY="14.0" mnemonicParsing="false" onAction="#RetourEspaceUser" prefHeight="25.0" prefWidth="196.0" text="Retour" />
+   </children>
+</AnchorPane>

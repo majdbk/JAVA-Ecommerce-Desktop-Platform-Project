@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="678.0" prefWidth="795.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.ComptePersUserController">
+    <stylesheets>
+        <URL value="@AuthAdmin.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="id_trans_static_cmpte_user" layoutX="6.0" layoutY="2.0" prefHeight="25.0" prefWidth="33.0" visible="false" />
+      <TabPane layoutY="69.0" prefHeight="609.0" prefWidth="803.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Mon Profil">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="26.0" text="Nom :" textFill="#f2e8e8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="69.0" text="Prénom :" textFill="#f8f3f3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="22.0" layoutY="121.0" text="Addresse :" textFill="#f2e6e6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="173.0" text="Email :" textFill="#f5efef">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="231.0" text="Télèphone :" textFill="#f2ebeb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="276.0" text="Statut :" textFill="#f2ebeb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="335.0" text="Login :" textFill="#eeecec">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="383.0" text="Mot De Passe :" textFill="#f2eded">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="426.0" text="Sexe :" textFill="#f8f4f4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="Nom_User" editable="false" layoutX="161.0" layoutY="24.0" />
+                        <TextField fx:id="prnm_User" editable="false" layoutX="161.0" layoutY="77.0" />
+                        <TextField fx:id="add_user" editable="false" layoutX="161.0" layoutY="129.0" />
+                        <TextField fx:id="email_user" editable="false" layoutX="161.0" layoutY="181.0" />
+                        <TextField fx:id="tel_user" editable="false" layoutX="161.0" layoutY="229.0" />
+                        <TextField fx:id="statu_user" editable="false" layoutX="161.0" layoutY="274.0" />
+                        <TextField fx:id="login_user" editable="false" layoutX="161.0" layoutY="333.0" />
+                        <TextField fx:id="pwd_user" layoutX="161.0" layoutY="381.0" />
+                        <TextField fx:id="sexe_user" editable="false" layoutX="161.0" layoutY="424.0" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="376.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/specific_user.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Mes Produits">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnIntAffich" layoutX="22.0" layoutY="296.0" mnemonicParsing="false" onAction="#VersIntAffich" text="Afficher Liste Offres Produits " />
+                        <Button fx:id="btnIntAjout" layoutX="22.0" layoutY="129.0" mnemonicParsing="false" onAction="#VersInterfaceAjout" text="Ajouter Une Offre Produit " />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Mes Services">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="343.0">
+                     <children>
+                        <Button fx:id="btnAffiche" layoutX="88.0" layoutY="235.0" mnemonicParsing="false" onAction="#afficherService" text="Afficher la liste des Services" />
+                        <Button fx:id="btnAjout" layoutX="88.0" layoutY="96.0" mnemonicParsing="false" onAction="#ajoutService" prefHeight="25.0" prefWidth="162.0" text="Ajouter un service" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Mes Demandes Services">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="592.0" prefWidth="788.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Ajouter demande">
+                                 <content>
+                                    <AnchorPane fx:id="map" minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="624.0">
+                                       <children>
+                                          <TextField fx:id="objet" layoutX="61.0" layoutY="93.0" prefHeight="25.0" prefWidth="396.0" promptText="objet" />
+                                          <TextField fx:id="description" layoutX="61.0" layoutY="132.0" prefHeight="93.0" prefWidth="396.0" promptText="description" />
+                                          <ComboBox fx:id="categorie" layoutX="61.0" layoutY="235.0" prefHeight="25.0" prefWidth="202.0" promptText="categorie">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="JARDINAGE" />
+                                                   <String fx:value="GARDERIE" />
+                                                   <String fx:value="ANIMALERIE" />
+                                                   <String fx:value="PHOTOGRAPHIE" />
+                                                   <String fx:value="PUBLICITE" />
+                                                   <String fx:value="EDUCATION" />
+                                                   <String fx:value="AUTRES" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                          <ComboBox fx:id="lieu" layoutX="61.0" layoutY="301.0" prefHeight="25.0" prefWidth="202.0" promptText="lieu">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="TUNIS" />
+                                                   <String fx:value="SFAX" />
+                                                   <String fx:value="BIZERTE" />
+                                                   <String fx:value="ARIANA" />
+                                                   <String fx:value="TAUZEUR" />
+                                                   <String fx:value="DJERBA" />
+                                                   <String fx:value="SOUSSE" />
+                                                   <String fx:value="HAMAMET" />
+                                                   <String fx:value="MANOUBA" />
+                                                   <String fx:value="autres" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                          <DatePicker fx:id="date" layoutX="59.0" layoutY="364.0" prefHeight="25.0" prefWidth="197.0" promptText="Date" />
+                                          <Button fx:id="ajout" layoutX="59.0" layoutY="429.0" mnemonicParsing="false" onAction="#ajout" prefHeight="49.0" prefWidth="406.0" text="Ajouter demande" textFill="#b97715">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="61.0" layoutY="7.0" prefHeight="43.0" prefWidth="428.0" text="Votre demande" textFill="#b97715">
+                                             <font>
+                                                <Font size="62.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fx:id="add" fitHeight="192.0" fitWidth="150.0" layoutX="465.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="confi" fitHeight="49.0" fitWidth="71.0" layoutX="416.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button fx:id="maping" layoutX="300.0" layoutY="301.0" mnemonicParsing="false" onAction="#afficher_map" prefHeight="25.0" prefWidth="155.0" text="Consulter GoogleMap" />
+                                          <ImageView fx:id="gmap" fitHeight="31.0" fitWidth="83.0" layoutX="446.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Afficher  demande">
+                                 <content>
+                                    <AnchorPane fx:id="poub" minHeight="0.0" minWidth="0.0" onDragEntered="#remplir" prefHeight="365.0" prefWidth="957.0">
+                                       <children>
+                                          <TableView fx:id="tableAffiche" layoutX="16.0" layoutY="14.0" onMouseClicked="#remplir" onMouseDragExited="#remplir" prefHeight="189.0" prefWidth="786.0">
+                                             <columns>
+                                                <TableColumn fx:id="col_id" prefWidth="45.0" text="Id" visible="false" />
+                                                <TableColumn fx:id="col_obj" prefWidth="144.0" text="Objet" />
+                                                <TableColumn fx:id="col_description" prefWidth="109.0" text="Description" />
+                                                <TableColumn fx:id="col_categorie" minWidth="0.0" prefWidth="114.0" text="Categorie" />
+                                                <TableColumn fx:id="col_lieu" minWidth="0.0" prefWidth="115.0" text="Lieu" />
+                                                <TableColumn fx:id="col_date" minWidth="0.0" prefWidth="57.0" text="Date" />
+                                                <TableColumn fx:id="col_validite" prefWidth="191.0" text="valide" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="17.0" layoutY="208.0" prefHeight="20.0" prefWidth="196.0" text="MODIFIER VOTRE DEMANDE" textFill="#241f19">
+                                             <font>
+                                                <Font name="Aparajita Bold Italic" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea fx:id="desc_modif" layoutX="14.0" layoutY="317.0" prefHeight="71.0" prefWidth="177.0" promptText="DESCRIPTION" />
+                                          <TextField fx:id="obj_mod" layoutX="16.0" layoutY="282.0" prefHeight="25.0" prefWidth="175.0" promptText="OBJET" />
+                                          <ComboBox fx:id="id_box" layoutX="14.0" layoutY="239.0" prefHeight="25.0" prefWidth="176.0" />
+                                          <ComboBox fx:id="categorie_modif" layoutX="16.0" layoutY="405.0" prefHeight="25.0" prefWidth="176.0">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="JARDINAGE" />
+                                                   <String fx:value="GARDERIE" />
+                                                   <String fx:value="ANIMALERIE" />
+                                                   <String fx:value="PHOTOGRAPHIE" />
+                                                   <String fx:value="PUBLICITE" />
+                                                   <String fx:value="EDUCATION" />
+                                                   <String fx:value="AUTRES" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                          <ComboBox fx:id="lieu_modif" layoutX="16.0" layoutY="442.0" prefHeight="25.0" prefWidth="175.0">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="TUNIS" />
+                                                   <String fx:value="SFAX" />
+                                                   <String fx:value="BIZERTE" />
+                                                   <String fx:value="ARIANA" />
+                                                   <String fx:value="TAUZEUR" />
+                                                   <String fx:value="DJERBA" />
+                                                   <String fx:value="SOUSSE" />
+                                                   <String fx:value="HAMAMET" />
+                                                   <String fx:value="MANOUBA" />
+                                                   <String fx:value="autres" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                          <TextField fx:id="date_mdoif" layoutX="17.0" layoutY="478.0" prefHeight="25.0" prefWidth="174.0" promptText="DATE" />
+                                          <Button fx:id="btnModif" layoutX="17.0" layoutY="516.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="25.0" prefWidth="174.0" text="Modifier" textFill="#b97715">
+                                             <font>
+                                                <Font name="Algerian" size="21.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="btnSuppDemande" layoutX="448.0" layoutY="252.0" mnemonicParsing="false" onAction="#SuppDemande" prefHeight="25.0" prefWidth="206.0" text="                       Supprimer demande" />
+                                          <TextField fx:id="text_Supp" layoutX="456.0" layoutY="252.0" prefHeight="25.0" prefWidth="189.0" visible="false" />
+                                          <TextField fx:id="labelSearchField" layoutX="452.0" layoutY="206.0" prefHeight="25.0" prefWidth="188.0" promptText="Rechercher  categorie/lieu" />
+                                          <ImageView fx:id="cherch" fitHeight="48.0" fitWidth="31.0" layoutX="402.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="pou" fitHeight="46.0" fitWidth="66.0" layoutX="433.0" layoutY="241.0" onMouseClicked="#SuppDemande" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="cahier" fitHeight="31.0" fitWidth="42.0" layoutX="159.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="62.0" fitWidth="51.0" layoutX="748.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/user_generale.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_retour_vers_espace_client" layoutX="239.0" layoutY="28.0" mnemonicParsing="false" onAction="#VersEspaceClient" prefHeight="25.0" prefWidth="179.0" text="Retour Vers Espace Client" />
+   </children>
+</AnchorPane>

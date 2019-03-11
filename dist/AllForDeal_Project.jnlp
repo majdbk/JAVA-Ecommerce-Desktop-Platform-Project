@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AllForDeal_Project.jnlp">
+  <information>
+    <title>AllForDeal_Project</title>
+    <vendor>Edzio</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AllForDeal_Project.jar" size="2947176" download="eager" />
+    <jar href="lib\jdbc-postgresql.jar" size="414600" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="827921" download="eager" />
+    <jar href="lib\postgresql-42.0.0 (5).jar" size="707261" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="AllForDeal_Project" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="TDC.esprit.ventePrivee.GUI.HomeContoller"  name="AllForDeal_Project" />
+  <update check="always"/>
+</jnlp>

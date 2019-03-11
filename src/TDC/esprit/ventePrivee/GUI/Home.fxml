@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="367.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.HomeContoller">
+    <stylesheets>
+        <URL value="@Home.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="240.0" prefHeight="38.0" prefWidth="329.0" text="Welcome To All For Deal">
+         <font>
+            <Font name="Kristen ITC" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnIntAjout" layoutX="5.0" layoutY="46.0" mnemonicParsing="false" onAction="#VersInterfaceAjout" text="Ajouter Une Offre Produit " />
+      <Button fx:id="btnIntAffich" layoutX="2.0" layoutY="171.0" mnemonicParsing="false" onAction="#VersIntAffich" text="Afficher Liste Offres Produits " />
+      <TextField fx:id="idUserInvisible" layoutX="482.0" layoutY="46.0" prefHeight="25.0" prefWidth="46.0" visible="false" />
+      <Button fx:id="btn_retour" layoutY="332.0" mnemonicParsing="false" onAction="#RetourVersAuthentif" prefHeight="38.0" prefWidth="134.0" text="Se Déconnecter">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

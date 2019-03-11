@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.AjoutController">
+  <stylesheets>
+      <URL value="@AddProduct.css" />
+</stylesheets> 
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Text fill="#110ed3" layoutX="46.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter un Services" wrappingWidth="396.13671875">
+         <font>
+            <Font size="33.0" />
+         </font></Text>
+      <Text layoutX="36.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez remplir les champs d'un service :" wrappingWidth="239.13671875" />
+      <Text layoutX="18.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="81.13671875" />
+      <Text layoutX="18.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="duree" wrappingWidth="69.0" />
+      <Text layoutX="18.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="lieu" wrappingWidth="69.0" />
+      <Text layoutX="18.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'haujoudhui" wrappingWidth="114.13671875" />
+      <Text layoutX="18.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="note d'valuation" wrappingWidth="95.13671875" />
+      <TextArea fx:id="desc" layoutX="133.0" layoutY="133.0" prefHeight="51.0" prefWidth="156.0" />
+      <TextField fx:id="durree" layoutX="131.0" layoutY="198.0" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="lieu" layoutX="130.0" layoutY="243.0" prefHeight="25.0" prefWidth="163.0" />
+      <Button fx:id="btnAjout" layoutX="443.0" layoutY="515.0" onAction="#AjoutAction" text="Ajouter" />
+      <Button fx:id="btnretour" layoutX="341.0" layoutY="515.0" mnemonicParsing="false" onAction="#retour" text="Retour" />
+      <DatePicker fx:id="date_val" layoutX="134.0" layoutY="289.0" prefHeight="25.0" prefWidth="163.0" promptText="DD/MM/YYYY" />
+      <ComboBox fx:id="note_val" layoutX="131.0" layoutY="339.0" prefHeight="25.0" prefWidth="169.0">
+          <items>
+           <FXCollections fx:factory="observableArrayList">
+              <String fx:value="1 etoile" />
+              <String fx:value="2 etoiles" />
+              <String fx:value="3 etoiles" />
+              <String fx:value="4 etoiles" />
+              <String fx:value="5 etoiles" />
+              
+          </FXCollections>   
+          </items>
+      </ComboBox>
+    </children>
+</AnchorPane>

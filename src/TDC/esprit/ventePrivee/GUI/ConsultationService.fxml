@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.ConsultationServiceController">
+    <stylesheets>
+        <URL value="@AddProduct.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="id_user_recuper" layoutX="553.0" layoutY="14.0" prefHeight="25.0" prefWidth="33.0" visible="false" />
+      <Label layoutX="91.0" layoutY="14.0" text="Bienvenu dans l'interface de consultation du service" textFill="#f6f6f8" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="110.0" text="Nom :" textFill="#e1dada" />
+      <Label layoutX="56.0" layoutY="151.0" text="Prenom :" textFill="#e1dada" />
+      <Label layoutX="56.0" layoutY="194.0" text="Adresse :" textFill="#e1dada" />
+      <Label layoutX="60.0" layoutY="235.0" text="E-mail :" textFill="#e1dada" />
+      <Label layoutX="57.0" layoutY="274.0" text="Télèphone :" textFill="#e1dada" />
+      <Text fill="#15d057" layoutX="86.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Propriétaire du Service" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#10d347" layoutX="88.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caractéristiques du Service" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nom_user" editable="false" layoutX="161.0" layoutY="106.0" />
+      <Label layoutX="56.0" layoutY="378.0" text="Description :" textFill="#e1dada" />
+      <Label layoutX="57.0" layoutY="505.0" text="Date :" textFill="#e1dada" />
+      <Label layoutX="59.0" layoutY="553.0" text="Catégorie :" textFill="#e1dada" />
+      <TextField fx:id="prnm_user" editable="false" layoutX="161.0" layoutY="147.0" />
+      <TextField fx:id="address_user" editable="false" layoutX="161.0" layoutY="190.0" />
+      <TextField fx:id="email_user" editable="false" layoutX="161.0" layoutY="231.0" />
+      <TextField fx:id="tel_user" editable="false" layoutX="161.0" layoutY="270.0" />
+      <TextArea fx:id="desc_serv" editable="false" layoutX="161.0" layoutY="378.0" prefHeight="99.0" prefWidth="229.0" />
+      <TextField fx:id="date_serv" editable="false" layoutX="161.0" layoutY="501.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="categorie_serv" editable="false" layoutX="161.0" layoutY="549.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="id_serv_user_recup" layoutX="554.0" layoutY="464.0" prefHeight="25.0" prefWidth="31.0" visible="false" />
+      <Button fx:id="btnRetour" layoutX="418.0" layoutY="526.0" mnemonicParsing="false" onAction="#RetourAction" prefHeight="25.0" prefWidth="94.0" text="Retour">
+         <effect>
+            <SepiaTone />
+         </effect></Button>
+   </children>
+</AnchorPane>

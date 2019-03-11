@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="511.0" prefWidth="630.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.AjouterProduitController">
+    <stylesheets>
+        <URL value="@AddProduct.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="63.0" layoutY="29.0" prefHeight="27.0" prefWidth="298.0" text="Ajout Produit Aux Offres" textFill="#9ee48f">
+         <font>
+            <Font name="Felix Titling" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="77.0" text="Prix :" textFill="#fcfcfc" />
+      <Label layoutX="28.0" layoutY="114.0" text="Libellé :" textFill="#fffefe" />
+      <Label layoutX="28.0" layoutY="152.0" text="Description :" textFill="#f5f5f5" />
+      <Label layoutX="24.0" layoutY="239.0" text="Date Ajout Produit :" textFill="#fcfcfc" />
+      <Label layoutX="33.0" layoutY="285.0" text="Catégorie :" textFill="WHITE" />
+      <Button fx:id="btnAjoutPrdOffre" layoutX="304.0" layoutY="431.0" mnemonicParsing="false" onAction="#AjouterProduitAuxOffres" prefHeight="25.0" prefWidth="182.0" text="Ajouter Produit Aux Offres" />
+      <Button fx:id="btnBack" layoutX="54.0" layoutY="431.0" mnemonicParsing="false" onAction="#RetourEnHome" prefHeight="25.0" prefWidth="176.0" text="Retourner Au Menu Principale" />
+      <Label layoutX="76.0" layoutY="-7.0" text="Interface Utilisateur" textFill="#58e174">
+         <font>
+            <Font name="MV Boli" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prix_prd" layoutX="166.0" layoutY="72.0" prefHeight="25.0" prefWidth="149.0" promptText="Insérer Prix Içi" />
+      <TextField fx:id="libelle_prd" layoutX="166.0" layoutY="110.0" promptText="Insérer Libellé içi" />
+      <TextArea fx:id="description_prd" layoutX="166.0" layoutY="152.0" prefHeight="64.0" prefWidth="212.0" promptText="Insérer Description Içi" />
+      <ComboBox fx:id="categorie_prd" layoutX="166.0" layoutY="281.0" onAction="#showListe" prefWidth="150.0" promptText="Faite Vote Choix Svp">
+          <items>
+           <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Telephonie" />
+              <String fx:value="Ordinateur" />
+              <String fx:value="Laptop" />
+              <String fx:value="Consoles_Videos" />
+              <String fx:value="Jeux_Videos" />
+              <String fx:value="Camescopes" />
+              <String fx:value="Vetements" />
+              <String fx:value="Bricolage" />
+              <String fx:value="Electromenager" />
+              <String fx:value="autres" />  
+          </FXCollections>   
+          </items>            
+      </ComboBox>    
+      <ImageView fitHeight="93.0" fitWidth="88.0" layoutX="325.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@userInterface.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelError" layoutX="395.0" layoutY="390.0" prefHeight="20.0" prefWidth="182.0" textFill="#ff0707">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="357.0" />
+      <Label fx:id="labelOk" layoutX="48.0" layoutY="380.0" prefHeight="20.0" prefWidth="188.0" textFill="#0ddd2d">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="date_Ajout" layoutX="166.0" layoutY="235.0" promptText="DD/MM/YYYY" />
+      <Label layoutX="35.0" layoutY="331.0" text="Photo :" textFill="#f8f6f6" />
+      <Button fx:id="btnBrowseFiles" layoutX="163.0" layoutY="336.0" mnemonicParsing="false" onAction="#BrowseFilesAction" prefHeight="25.0" prefWidth="99.0" text="Browse" />
+      <ImageView fx:id="imageView_Field" fitHeight="150.0" fitWidth="200.0" layoutX="416.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D height="150.0" width="200.0" />
+         </viewport>
+      </ImageView>
+      <TextArea fx:id="TextField_Path" layoutX="285.0" layoutY="335.0" prefHeight="27.0" prefWidth="316.0" promptText="Path of Selected File or Files" />
+      <TextField fx:id="idUser_Invisibleeee" layoutX="565.0" layoutY="36.0" prefHeight="25.0" prefWidth="26.0" visible="false" />
+   </children>
+</AnchorPane>

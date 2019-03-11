@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.OffreProduitController">
+    <stylesheets>
+        <URL value="@AuthAdmin.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="table_produit" layoutX="55.0" prefHeight="200.0" prefWidth="618.0">
+        <columns>
+          <TableColumn fx:id="id_col" prefWidth="67.0" text="id" visible="false" />
+          <TableColumn fx:id="prix_col" minWidth="0.0" prefWidth="0.0" text="prix" />
+            <TableColumn fx:id="libelle_col" minWidth="2.0" prefWidth="173.0" text="libelle" />
+            <TableColumn fx:id="description_col" minWidth="0.0" prefWidth="0.0" text="description" />
+            <TableColumn fx:id="categorie_col" minWidth="0.0" prefWidth="257.0" text="categorie" />
+            <TableColumn fx:id="validite_col" minWidth="0.0" prefWidth="115.0" text="validite_prod" visible="false" />
+            <TableColumn fx:id="date_col" minWidth="0.0" prefWidth="186.0" text="date_ajout" />
+            <TableColumn fx:id="id_user_col" prefWidth="55.0" text="id_user" visible="false" />
+        </columns>
+      </TableView>
+      <Button fx:id="retour_id" layoutX="45.0" layoutY="321.0" mnemonicParsing="false" onAction="#RetourPrincipale" prefHeight="25.0" prefWidth="109.0" text="retour" />
+      <Button fx:id="consulter_id" layoutX="400.0" layoutY="321.0" mnemonicParsing="false" onAction="#consulterProduit" text="Consulter Produit" />
+      <TextField fx:id="categorie_id" layoutX="216.0" layoutY="213.0" prefHeight="25.0" prefWidth="177.0" promptText="Tapez categorie à chercher içi" />
+      <TextField fx:id="id_invisible" layoutX="593.0" layoutY="254.0" prefHeight="25.0" prefWidth="35.0" visible="false" />
+      <Button fx:id="statistique_id" layoutX="209.0" layoutY="267.0" mnemonicParsing="false" onAction="#afficherStatistique" text="Voir Statistiques Des Produits" />
+      <TextField fx:id="id_user_invisiblee" layoutX="650.0" layoutY="292.0" prefHeight="25.0" prefWidth="35.0" visible="false" />
+   </children>
+</AnchorPane>
+ 

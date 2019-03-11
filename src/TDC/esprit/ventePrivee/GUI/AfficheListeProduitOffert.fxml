@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="529.0" prefWidth="1289.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TDC.esprit.ventePrivee.GUI.AfficherProduitController">
+    <stylesheets>
+        <URL value="@AffichageList.css" />
+    </stylesheets>
+   <children> 
+      <TableView fx:id="TableAffiche" editable="true" layoutX="520.0" layoutY="1.0" prefHeight="273.0" prefWidth="769.0">
+         <columns>
+            <TableColumn fx:id="Id_Col" prefWidth="73.0" text="Numéro " />
+            <TableColumn fx:id="prix_Col" prefWidth="77.0" text="Prix" />
+            <TableColumn fx:id="Lib_Col" prefWidth="75.0" text="Libéllè" />
+            <TableColumn fx:id="Date_Col" prefWidth="114.0" text="Date Ajout " />
+            <TableColumn fx:id="Categ_Col" prefWidth="98.0" text="Catégorie" />
+            <TableColumn fx:id="Desc_Col" prefWidth="229.0" text="Description" />
+            <TableColumn fx:id="validite_col" prefWidth="120.0" text="Validité" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnSupp" layoutX="823.0" layoutY="385.0" mnemonicParsing="false" onAction="#SuppProduit" prefHeight="25.0" prefWidth="182.0" text="Supprimer Produit" />
+      <TextField fx:id="labelSupp" layoutX="1033.0" layoutY="385.0" prefHeight="25.0" prefWidth="174.0" promptText="Insérer Id Produit à Supprimer" visible="false" />
+      <Label fx:id="labelRouge" layoutX="940.0" layoutY="356.0" prefHeight="17.0" prefWidth="156.0" textFill="#d00c0c" />
+      <Label fx:id="labelVert" layoutX="436.0" layoutY="364.0" prefHeight="17.0" prefWidth="132.0" textFill="#0dd04b" />
+      <Button fx:id="btnMenuPrincipale" layoutX="611.0" layoutY="472.0" mnemonicParsing="false" onAction="#RetourMenu" prefHeight="25.0" prefWidth="182.0" text="Retourner au Menu Principale" />
+      <TextField fx:id="labelSearchField" layoutX="796.0" layoutY="298.0" prefHeight="25.0" prefWidth="249.0" promptText="Insérer Catgéroie/Libéllé Produit à Chercher" />
+      <Label layoutX="64.0" layoutY="116.0" text="Prix :" textFill="#f2f0f0" />
+      <Label layoutX="65.0" layoutY="167.0" text="Libellé :" textFill="#fcf8f8" />
+      <Label layoutX="69.0" layoutY="219.0" text="Description :" textFill="#fcf9f9" />
+      <Label layoutX="71.0" layoutY="314.0" text="Date Ajout :" textFill="#f8f6f6" />
+      <Label layoutX="74.0" layoutY="389.0" text="Catégorie :" textFill="#f8f8f8" />
+      <TextField fx:id="Text_Prix" layoutX="189.0" layoutY="112.0" />
+      <TextField fx:id="Text_Libelle" layoutX="189.0" layoutY="163.0" />
+      <TextArea fx:id="Text_Desc" layoutX="189.0" layoutY="219.0" prefHeight="63.0" prefWidth="221.0" />
+      <ComboBox fx:id="Text_Categorie" layoutX="189.0" layoutY="385.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Telephonie" />
+               <String fx:value="Ordinateur" />
+               <String fx:value="Laptop" />
+               <String fx:value="Consoles_Videos" />
+               <String fx:value="Jeux_Videos" />
+               <String fx:value="Camescopes" />
+               <String fx:value="Vetements" />
+               <String fx:value="Bricolage" />
+               <String fx:value="Electromenager" />
+               <String fx:value="autres" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Button fx:id="btnValidModif" layoutX="251.0" layoutY="472.0" mnemonicParsing="false" onAction="#ValiderModif" prefHeight="25.0" prefWidth="175.0" text="Valider Modification" />
+      <Text fill="#7ada81" fontSmoothingType="LCD" layoutX="110.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mise à jour d'offre produit :">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="DateAjout_Field" layoutX="190.0" layoutY="310.0" promptText="DD/MM/YYYY" />
+      <TextField fx:id="id_prod_modif_non_visible" layoutX="190.0" layoutY="81.0" visible="false" />
+      <Text layoutX="739.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indice :" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#03c651" layoutX="831.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 : Offre Produit Validé" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="#e40c0c" layoutX="1022.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 : Offre Produit en attente" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="id_user_offre_produit_invisible" layoutX="34.0" layoutY="25.0" prefHeight="25.0" prefWidth="40.0" visible="false" />
+   </children>   
+</AnchorPane>
